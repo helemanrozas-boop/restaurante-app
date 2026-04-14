@@ -1,0 +1,118 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- IMAGEN PASTEL -->
+    <ImageView
+        android:id="@+id/imgPastel"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/pastel"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- INPUT PASTEL -->
+    <EditText
+        android:id="@+id/edtPastel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/pastel"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imgPastel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- SUBTOTAL PASTEL -->
+    <TextView
+        android:id="@+id/txtSubtotalPastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/edtPastel"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- IMAGEN CAZUELA -->
+    <ImageView
+        android:id="@+id/imgCazuela"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/cazuela"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtotalPastel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- INPUT CAZUELA -->
+    <EditText
+        android:id="@+id/edtCazuela"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/cazuela"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imgCazuela"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- SUBTOTAL CAZUELA -->
+    <TextView
+        android:id="@+id/txtSubtotalCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/edtCazuela"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- SWITCH PROPINA -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/propina"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtotalCazuela"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- TOTAL COMIDA -->
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/switchPropina"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- PROPINA VALOR -->
+    <TextView
+        android:id="@+id/txtPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/propina_valor"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTotal"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- TOTAL FINAL -->
+    <TextView
+        android:id="@+id/txtFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_final"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/txtPropina"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
